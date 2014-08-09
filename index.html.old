@@ -1,0 +1,143 @@
+<!-- Hammer reload -->
+  <script>
+    setInterval(function(){
+      try {
+        if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+        ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+        ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+        ws.onmessage = function(){
+          var links = document.getElementsByTagName('link');
+            for (var i = 0; i < links.length;i++) {
+            var link = links[i];
+            if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+              href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+              link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+            }
+          }
+        }
+      }catch(e){}
+    }, 1000)
+  </script>
+<!-- /Hammer reload -->
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<!-- Hammer    <meta name="google-site-verification" content="ptp_SMktInYoj_fB434N22bvUFtsiDrzccq2vDdhdPs" />
+
+ reload -->
+  <script>
+    setInterval(function(){
+      try {
+        if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+        ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+        ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+        ws.onmessage = function(){
+          var links = document.getElementsByTagName('link');
+            for (var i = 0; i < links.length;i++) {
+            var link = links[i];
+            if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+              href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+              link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+            }
+          }
+        }
+      }catch(e){}
+    }, 1000)
+  </script>
+        <!-- /Hammer reload -->
+
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Divine Mercy Hills Foundation of Southern California</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel='stylesheet' href='/files/skeleton.css'>
+    <link rel='stylesheet' href='/files/responsiveslides.css'>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/files/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/files/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+<div class='container'>
+  <div class='sixteen columns'>
+    <h1>Divine Mercy Hills Foundation of Southern California</h1>
+  </div>
+  <div class='sixteen columns'>
+    <ul class='rslides'>
+      <li>
+        <img src='/files/Pano2.png'>
+      </li>
+      <li>
+        <img src='/files/Pano3.png'>
+      </li>
+      <li>
+        <img src='/files/Pano5.png'>
+      </li>
+    </ul>
+  </div>
+  <div class='two-thirds column'>
+    <h3>Mission Statement</h3>
+    <p>The DMHFSC is dedicated to the design, development, and maintenance of a Divine Mercy Shrine located in Encinitas, CA. for the purpose of spreading to an aching world the Divine Mercy message and devotion. To draw people of all nations, cultures, and beliefs to a vessel with which they are to keep coming in prayer for graces to the fountain of mercy - the Image of the Divine Mercy. For meditational and contemplative prayers venerating this image with trust in our Lord Jesus Christ who said, "I promise that the soul that will venerate this Image will not perish. I also promise victory over its enemies already here on earth, especially at the hour of death. I myself will defend it as My own glory... By means of this image I shall grant many graces to souls." Through this shrine we shall proclaim to the whole world God's unfathomable Mercy.</p>
+    <iframe class="tube" width="95%" height="360" src="http://www.youtube.com/embed/DZb9zKuTumk?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class='one-third column'>
+    <!--div class='cntr'>
+      <h3>Membership Application</h3>
+      <p>If you'd like to become a member, please download our member application using the button below.</p>
+      <a href='/files/MembApp.docx'>
+        <div class='btn'>Download</div>
+      </a>
+    </div>
+    <div class='cntr'>
+      <h3>Pledge Form</h3>
+      <p>You can download our pledge form by clicking on the button below.</p>
+      <a href='/files/PledgeForm.docx'>
+        <div class='btn'>Download</div>
+      </a>
+    </div-->
+  </div>
+  <div class='sixteen columns foot'>
+    <h2>Contact Information</h2>
+    <h5>Zarina Cruz</h5>
+    <p>Cell: 619-890-2789 <br> Home: 760-602-0969 <br> Email: <a href="zaricruz@att.net">zaricruz@att.net</a></p>
+  </div>
+</div>
+<!-- End Document
+================================================== -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src='/files/responsiveslides.min.js'></script>
+
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+
+</body>
+</html>

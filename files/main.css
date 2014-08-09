@@ -1,0 +1,84 @@
+*, *:after, *:before { box-sizing: border-box;}
+html, body {height:100%; background:#2F0300; color:#BBB; font-family:Arial,sans-serif;font-size:0.9em; margin:0}
+body {position:relative;left:0px;overflow-x:hidden}
+h4, p {letter-spacing:0.7pt; line-height:15pt;}
+a {color:white;}
+h1, h2, h3 {margin:0; padding:0; color:white;  font-size:12pt; text-align:center; text-transform:uppercase}
+body, article > div {margin:0 auto;}
+section {display:table;width:100%;background:url('/files/bg.png') fixed no-repeat center top #3C180C; background-size:contain; min-height:50px; margin:0 auto; position:relative;}
+section.fullheight, #stickyribbon  {height:100%;}
+article {padding:50px 20px;display:table-cell;background:rgba(0,0,0,0.8); }
+article > div {width:90%; max-width:800px}
+h1 { font-size:20pt;margin-bottom:20px;letter-spacing:0em; text-shadow:3px 3px #333}
+#stickyribbon {position:fixed; display:table; top:0px; padding:0 20px; background:rgba(101,14,15,0.9);  z-index:99; width:11%;  left:-11%;}
+#stickyribbon nav {display:table-cell; vertical-align:middle}
+#stickyribbon nav a {text-decoration:none; text-transform:uppercase;}
+#stickyribbon ul li { list-style:none; margin:20px 0; }
+#title nav {text-align:center; margin-top:50px; font-size:8pt; padding-top:5%; max-width:500px; margin: 0 auto;}
+ul {margin:0; padding:0;}
+#title nav ul li {display:inline-block; border:2px solid white; font-size:larger; margin:10px; text-transform:uppercase; background:rgba(0,0,0,0.5);}
+#title nav a { text-align:center; text-decoration:none; display:block; padding:5px 10px; }
+#title nav li:hover {color:white; background:rgba(50,50,50,0.9);}
+#title {height:100%;vertical-align:middle;background:rgba(0,0,0,0.2);}
+#aboutus {background:rgba(0,0,0,0.7);}
+#aboutus li {margin:10px; font-size:1.1em;}
+#aboutus ul {margin-bottom:20px;}
+#gallery {background:rgba(0,0,0,0.9);}
+#contact {background:rgba(0,0,0,0.9);}
+#contact table {width:100%;}
+#contact th {text-align:left;}
+#gallery h2 {margin:10px;}
+#gallery li {list-style:none;margin-bottom:5px; }
+#gallery img {width:100%;}
+#ourgoals td {width:25%;}
+#ourgoals ul {margin-left:10px;}
+.header {
+    background-color: transparent;
+    padding:20px;
+    height: 90px;
+    position: fixed;
+    transition: top 200ms ease 0s;
+    width: 150px;
+    z-index: 10;
+}
+.header .nav-button {
+    position: absolute;
+}
+.header .nav-button #menubutton {
+    display: block;
+    outline: medium none;
+    overflow: auto;
+    width: 150px;
+}
+.header .nav-button #menubutton .burger {
+    float: left;
+}
+.header .nav-button #menubutton p {
+    float: left;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.header .back-button {
+    display: none;
+}.burger {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+    width: 33px;
+}
+.burger .one, .burger .three, .burger .two {
+    background: none repeat scroll 0 0 white;
+    border-radius: 2px;
+    height: 4px;
+    margin-top: 3px;
+    position: absolute;
+    transition: all 0.2s ease-in-out 0s;
+    width: 33px;
+}
+.burger .two {
+    margin-top: 13px;
+}
+.burger .three {
+    margin-top: 23px;
+}
